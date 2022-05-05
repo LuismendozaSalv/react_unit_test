@@ -6,9 +6,9 @@ import '@testing-library/jest-dom'
 test('Weather Render', async () => { 
     //AAA
     
-    const { findByRole } = render(<Weather temperature={10} />)
+    const { findByRole } = render(<Weather temperature={10} state= "cloud"/>)
     
     const temp = await findByRole("heading")
 
-    expect(temp).toHaveTextContent(10)
-})
+    expect(temp).toHaveTextContent("10")
+}) 
